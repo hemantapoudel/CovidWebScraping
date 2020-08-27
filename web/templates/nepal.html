@@ -1,0 +1,81 @@
+<html>
+<head>
+{%load static%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<title>Covid-19 Nepal</title>
+<style>
+body {
+  background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-md-4">
+
+
+
+		</div>
+		<div class="col-md-4">
+
+<br>
+<center>
+<h2>Covid-19 Tracker for Nepal</h2><br>
+<div class="container-fluid">
+	<div class="row">
+  
+      
+		
+		<div class="col-md-12">
+      <a href="/nepal"><img src="{% static 'img/nepal.png'%}" height="200" width="200"></a><br>
+      
+		</div>
+		
+    
+	</div>
+</div>
+<br>
+<form method="POST" id="form1">
+{% csrf_token %}
+<b>Enter district :</b> <input type="search" name="district">
+<button type="submit" form="form1" class="btn btn-success">Search</button>
+</form>
+{{err}}<br>
+<table class="table table-striped" >
+<tbody>
+<tr>
+<td align="center">District:</td><td>{{dname}}</td>
+</tr>
+<tr>
+<td align="center">Total Cases:</td><td>{{Total}}</td>
+</tr>
+<tr>
+<td align="center">Total Deaths:</td><td>{{Deaths}}</td>
+</tr>
+<tr>
+<td align="center">Recovered:</td><td>{{Recovered}}</td>
+</tr>
+<tr>
+<td align="center">Active Cases:</td><td>{{Active}}</td>
+</tr>
+</tbody>
+</table>
+
+</center>
+
+		</div>
+		<div class="col-md-4">
+
+
+
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

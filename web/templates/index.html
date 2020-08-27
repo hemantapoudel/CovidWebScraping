@@ -1,0 +1,37 @@
+<html>
+<head>
+{% load static %}	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<title>Covid-19 Update</title>
+<style>
+body {
+  background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+<center>
+<h1>Covid-19 Tracker</h1>
+
+<br>
+<div class="container-fluid">
+	<div class="row">
+  
+		<div class="col-md-6">
+      <a href="/nepal"><img src="{% static 'img/nepal.png'%}" height="550" width="550"></a><br>
+      <h1>Nepal</h1>
+		</div>
+		<div class="col-md-6">
+  <a href="/world"><img src="{% static 'img/globe.png'%}" height="550" width="550"></a></br>
+  <h1>World</h1>
+		</div>
+    
+	</div>
+</div>
+</center>
+
+
+
+</body>
+</html>
